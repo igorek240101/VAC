@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FD9FA6A1-6D66-4C96-B5F5-AF7D80DEC587}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Visual_Module</RootNamespace>
+    <AssemblyName>Visual_Module</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Create_new_project.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Create_new_project.Designer.cs">
+      <DependentUpon>Create_new_project.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Info.Designer.cs">
+      <DependentUpon>Info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Hello_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hello_Form.Designer.cs">
+      <DependentUpon>Hello_Form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Main_Window.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Main_Window.Designer.cs">
+      <DependentUpon>Main_Window.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Proper.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Proper.Designer.cs">
+      <DependentUpon>Proper.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Create_new_project.resx">
+      <DependentUpon>Create_new_project.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hello_Form.resx">
+      <DependentUpon>Hello_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Info.resx">
+      <DependentUpon>Info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Main_Window.resx">
+      <DependentUpon>Main_Window.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Proper.resx">
+      <DependentUpon>Proper.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\External_Controller\External_Controller.csproj">
+      <Project>{111c4c42-787b-4808-b378-06205bd79ba1}</Project>
+      <Name>External_Controller</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\External_Module\Bilder\Bilder_Ex.csproj">
+      <Project>{3f2dffcd-0ae7-4fbb-b92c-ff5e7b39ed85}</Project>
+      <Name>Bilder_Ex</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\External_Module\Data\Data_Ex.csproj">
+      <Project>{177e0306-ea67-4f35-b041-32383f088f3f}</Project>
+      <Name>Data_Ex</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\External_Module\if_operator_Ex\if_operator_Ex.csproj">
+      <Project>{58f08502-eeed-4ca0-a736-1ba90319f7ba}</Project>
+      <Name>if_operator_Ex</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\External_Module\Noda_Ex\Noda_Ex.csproj">
+      <Project>{c6f6da13-aaa9-4ed6-bb50-a34dcee381d0}</Project>
+      <Name>Noda_Ex</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\External_Module\Operators\Operators_Ex.csproj">
+      <Project>{9040d903-5ea4-4f62-87f1-614490b34213}</Project>
+      <Name>Operators_Ex</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\External_Module\Result_Ex\Result_Ex.csproj">
+      <Project>{d600e835-b755-4d50-b9bc-0525a59442d7}</Project>
+      <Name>Result_Ex</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\External_Module\Working_data_Ex\Working_data_Ex.csproj">
+      <Project>{83989dff-3634-4ddc-aa44-091c407cc458}</Project>
+      <Name>Working_data_Ex</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Interpretation_Controller\Interpretation_Controller.csproj">
+      <Project>{835dc3c4-9ef4-4c02-b01f-ae821807f73b}</Project>
+      <Name>Interpretation_Controller</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MVS Controller\if_operator\if_operator.csproj">
+      <Project>{55ffadee-8fbe-4877-8c13-fa70b0535d57}</Project>
+      <Name>if_operator</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MVS Controller\MVS_Controller_config\MVS_Controller_config.csproj">
+      <Project>{96bc5d8e-8afb-4bad-9e2a-8b827c0f6bf0}</Project>
+      <Name>MVS_Controller_config</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MVS Controller\Noda\Noda.csproj">
+      <Project>{ed62c60e-2da0-4557-8e1c-d3c89ed3bd0f}</Project>
+      <Name>Noda</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MVS Controller\Result\Result.csproj">
+      <Project>{92ae2898-4956-4708-b952-7b375490f028}</Project>
+      <Name>Result</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MVS Controller\Working_Data\Working_Data.csproj">
+      <Project>{6c806b80-8004-4b21-ba29-cb6f379723b5}</Project>
+      <Name>Working_Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Logo.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

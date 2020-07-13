@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FCF15AD6-1249-48F1-8C18-8A8517D2DD03}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LMath_Config</RootNamespace>
+    <AssemblyName>LMath_Config</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Config.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LMath_C\LMath_C.csproj">
+      <Project>{c90cfcf9-5abe-42c6-9487-f934d75562fe}</Project>
+      <Name>LMath_C</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LMath_Main\LMath_Main.csproj">
+      <Project>{3def3843-4999-4fe0-ad14-9c7ea8b16042}</Project>
+      <Name>LMath_Main</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LMath_M\LMath_M.csproj">
+      <Project>{0d664ef4-c7b4-469f-acd1-45dba9475d0b}</Project>
+      <Name>LMath_M</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LMath_N\LMath_N.csproj">
+      <Project>{d463b3fb-d1e2-4eec-afa1-f0bda5cab91b}</Project>
+      <Name>LMath_N</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LMath_P\LMath_P.csproj">
+      <Project>{02bda73f-7aef-400b-a16c-0bccdb4478d9}</Project>
+      <Name>LMath_P</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LMath_Q\LMath_Q.csproj">
+      <Project>{38958e84-46d4-41e5-a624-753133f4154b}</Project>
+      <Name>LMath_Q</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\LMath_Z\LMath_Z.csproj">
+      <Project>{004e63ee-0af5-4929-9b9e-10b981375ab7}</Project>
+      <Name>LMath_Z</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
